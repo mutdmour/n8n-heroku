@@ -24,8 +24,12 @@ jobs:
           git clone https://github.com/n8n-io/n8n
           cd n8n
           git checkout templates/bugfixing
+          echo $N8N_VERSION
+          export N8N_VERSION=mytest3
       - name: Build, Push and Release a Docker container to Heroku. # Your custom step name
         uses: gonuit/heroku-docker-deploy@v1.3.3 # GitHub action name (leave it as it is).
+        env:
+          N8N_VERSION: 'mytest2'
         with:
           # Below you must provide variables for your Heroku app.
 

@@ -56,7 +56,7 @@ jobs:
 
           # (Optional, default: "")
           # Additional options of docker build command.
-          docker_options: "--no-cache | N8N_VERSION=version"
+          docker_options: "--no-cache --build-arg N8N_VERSION=test "
 
           # (Optional, default: "web")
           # Select the process type for which you want the docker container to be uploaded.
